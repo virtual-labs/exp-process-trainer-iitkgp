@@ -2,37 +2,106 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "Which of the following is not the feature of a modern control system?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": " Correct power level",
+        "b": "No oscillation",
+        "c": "Quick response",
+        "d": "Accuracy"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "a",
+      "correctAnswer": "b",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": " Which of the following element is not used in an automatic control system?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Final control element",
+        "b": "Sensor",
+        "c": "Oscillator",
+        "d": "Error detector"
       },
       "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "A PID controller is employed to stably control a plant with transfer function <br/> $$G(s)=\frac{1}{(s+2)(s+1)}$$ <br/> Now integral gain and proportional gain are increased by factor 3 and factor 2 respectively and derivative gain remains unchaned.Given that the closed loop system remains stable with new gains,the steady state error in tracking a ramp reference signal is______",
+      "answers": {
+        "a": "Remains Unchaned",
+        "b": "Decreases by factor 2",
+        "c": "Decreases by factor 3",
+        "d": "Decreases by factor 5"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "The electric switch to control any electrical equipment will act as,",
+      "answers": {
+        "a": "PD Controller",
+        "b": "Proportional Controller",
+        "c": " PID Controller",
+        "d": "ON-OFF Controller"
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What is the relationship between the steady-state error, gain and the tendency of oscillations when the controller is supposed to be under the proportional action?",
+      "answers": {
+        "a": "Steady-state error increases with an increase in gain and oscillation tendency",
+        "b": "Steady-state error decreases with the decrease in gain and oscillation tendency",
+		"c": "Steady-state error decreases with an increase in gain and oscillation tendency",
+        "d": "Steady-state error increases with the decrease in gain and oscillation tendency"
+        
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "The input to a controller is",
+      "answers": {
+        "a": "Sensed Signal",
+        "b": "Error Signal",
+        "c": "Desired variable value",
+        "d": "Signal of fixed amplitude not dependent on desired variable value"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "On-off Control is also called as ________.",
+      "answers": {
+        "a": "one position control",
+        "b": "two position control",
+        "c": "four position control",
+        "d": "half position control"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Proportional band of the controller is expressed as:",
+      "answers": {
+        "a": "Gain",
+        "b": "Ratio",
+        "c": "Percentage",
+        "d": "Range of control variables"
+        
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    }, 
+    
+	
+	{
+      "question": "In which one of the following controllers, the response is fast?",
+      "answers": {
+        "a": "PI",
+        "b": "PID",
+        "c": "Both a and b",
+        "d": "None of the above"
+      },
+      "correctAnswer": "b",
       "difficulty": "beginner"
     }
   ]
