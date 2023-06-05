@@ -24,11 +24,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "A PID controller is employed to stably control a plant with transfer function
-	    
-	    $$G(s)=\frac{1}{(s+2)(s+1)}$$
-
- Now integral gain and proportional gain are increased by factor 3 and factor 2 respectively and derivative gain remains unchaned.Given that the closed loop system remains stable with new gains,the steady state error in tracking a ramp reference signal is______",
+      "question": "A PID controller is employed to stably control a plant with transfer function  $$G(s)= \frac{1}{(s+2)(s+1)}$$ Now integral gain and proportional gain are increased by factor 3 and factor 2 respectively and derivative gain remains unchaned.Given that the closed loop system remains stable with new gains,the steady state error in tracking a ramp reference signal is______",
       "answers": {
         "a": "Remains Unchaned",
         "b": "Decreases by factor 2",
