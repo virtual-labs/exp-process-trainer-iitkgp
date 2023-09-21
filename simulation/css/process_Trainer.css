@@ -1,0 +1,330 @@
+/* This HTML page and script files are developed by
+    Piyali Chattopadhyay
+    Project Scientist-Technical,
+    Virtual Labs IIT Kharagpur.*/
+
+
+.img-container {
+    display: inline-block;
+    position: relative;
+}
+
+#frequency-knob-container-fng {
+    border: 1px dotted red;
+    margin-bottom: 20px;
+    width: 50%;
+    height: 100%;
+    padding: 5px;
+    /*background-color: orange;*/
+    text-align: center;
+    cursor:pointer;
+}
+#amplitude-knob-container-fng {
+    border: 1px dotted red;
+    margin-bottom: 20px;
+    width: 50%;
+    height: 100%;
+    padding: 5px;
+    /*background-color: orange;*/
+    text-align: center;
+    cursor:pointer;
+}
+
+#mon{
+position: absolute;
+    width: 3%;
+    height: 4%;
+    top: 66.4%;
+    left: 34%;	
+}
+
+#dial{
+    position: absolute;
+    width: 13%;
+    height: 10%;
+    top: 61%;
+    left: 73%;
+}
+
+
+#pon{
+position: absolute;
+    width: 3%;
+    height: 4%;
+    top: 66.4%;
+    left: 39.2%;
+}
+
+#rr{
+   position: absolute;
+    width: 3%;
+    height: 4%;
+    top: 79%;
+    left: 56.4%;
+}
+#rr2{
+        position: absolute;
+    width: 3%;
+    height: 4%;
+    top: 35.4%;
+    left: 27%;
+}
+
+#sideled{
+    position: absolute;
+    width: 3%;
+    height: 7%;
+    top: 37.4%;
+    left: 0%;
+}
+
+#sidesw{
+    position: absolute;
+    width: 5%;
+    height: 6%;
+    top: 73.4%;
+    left: -2%;
+}
+#pointer{
+    position: absolute;
+    width: 8%;
+    height: 3.2%;
+    top: 65.4%;
+    left: 70.2%;
+}
+
+#pointer2{
+    position: absolute;
+    width: 8%;
+    height: 3.2%;
+    top: 63.4%;
+    left: 70.2%;
+}
+
+#angle{
+    position: absolute;
+    width: 11.2%;
+    height: 26.2%;
+    top: 22.4%;
+    left: 4.4%;
+}
+
+
+#rect{
+	width: 0%;
+    height: 4%;
+    position: absolute;
+    left: 13.2%;
+    bottom: 56.7%;
+    padding: 4px;
+    background-color: black;
+    transform: rotate(21deg);
+
+ }
+#opener{
+	position: absolute;
+    height: 15%;
+    width: 11%;
+    top: 28.3%;
+    left: 9.6%;
+    border-radius: 100%;
+    margin: auto;
+    background: linear-gradient(90deg, #B6B4B4 50%, transparent 50%);
+    transform: rotate(-163deg);
+}
+#openning{
+	position: absolute;
+    
+    height: 24%;
+    width: 17%;
+    top: 24%;
+    left: 6.6%;
+    border-radius: 100%;
+    margin: auto;
+    background: linear-gradient(90deg, #DDDFDD 50%, transparent 50%);
+    transform: rotate(180deg);
+}
+#chng_angl
+{
+    position: absolute;
+    top: 10.4%;
+    left: 2.7%;
+}
+#anglvalue{
+	position: absolute;    
+    top: 11%;
+    left: 17.6%;
+	background-color:yellow;
+	
+}
+
+/*#opener{
+	position: absolute;
+    height: 11%;
+    width: 12%;
+    top: 36%;
+    left: 9.2%;
+    border-radius: 100%;
+    border-top-left-radius: 0%;
+    border-top-left-radius: 2;
+    border-bottom-left-radius: 763%;
+    der-top-width: thin;
+    gin: auto;
+    background: linear-gradient(90deg, blue 50%, transparent 50%);
+}*/
+
+#div1{	
+	position: absolute;
+    top: 3.4%;
+    left: 68.4%;
+}
+
+#div2{	
+	position: absolute;
+    top: 3.4%;
+    left: 48.4%;
+}
+
+#div3{	
+	position: absolute;
+    top: 3.4%;
+    left: 28.4%;
+}
+
+#div4{	
+	position: absolute;
+    top: 3.4%;
+    left: 91.4%;
+}
+
+table, th, td {
+  border: 1px solid black;
+  /*border-collapse: collapse;*/
+}
+tr:nth-child(even) {
+  background-color: #D6EEEE;
+}  
+tr:nth-child(odd) {
+  background-color: #F0FBCC;
+} 
+
+
+ #bd1{
+    position: absolute;
+    left: 29.8%;
+    bottom: 58.5%;
+    padding: 4px;
+    
+  }
+   #bd2{
+    position: absolute;
+    left: 72.2%;
+    bottom: 56.7%;
+    padding: 4px;
+	
+  }
+  #bd3{
+    position: absolute;
+    left: 9.7%;
+    bottom: 27%;
+    padding: 4px;
+}
+	
+  
+   #bd4{
+   position: absolute;
+    left: 62%;
+    bottom: 46.8%;
+    padding: 4px;
+	
+  }
+   #bd5{
+    position: absolute;
+    left: 66%;
+    bottom: 47%;
+    padding: 4px;
+	
+  }
+
+ #bd6{
+    position: absolute;
+    left: 40%;
+    bottom: 19.3%;
+    padding: 4px;
+    
+ }
+
+#bd7{
+   position: absolute;
+    left: 49.9%;
+    bottom: 18.2%;
+    padding: 4px;
+    
+  }
+   #bd8{
+    position: absolute;
+    left: 53.8%;
+    bottom: 18.3%;
+    padding: 4px;
+	
+  }
+  #bd9{
+    position: absolute;
+    left: 61.3%;
+    bottom: 18.3%;
+    padding: 4px;
+}
+	
+  
+   #bd10{
+    position: absolute;
+    left: 85.6%;
+    bottom: 14.5%;
+    padding: 4px;
+	
+  }
+   #bd11{
+    position: absolute;
+    left: 9.8%;
+    bottom: 14%;
+    padding: 4px;
+	
+  }
+
+#bd12{
+    position: absolute;
+    left: 49.3%;
+    bottom: 55.3%;
+    padding: 4px;
+}
+	
+  
+   #bd13{
+	z-index:-1;
+	position: absolute;
+    left: 25.6%;
+    bottom: 77.5%;
+    padding: 4px;
+  }
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
