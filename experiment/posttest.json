@@ -2,7 +2,7 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "Which of the following is not the feature of a modern control system?",
+      "question": "1. Which of the following is not the feature of a modern control system?",
       "answers": {
         "a": " Correct power level",
         "b": "No oscillation",
@@ -13,7 +13,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": " Which of the following element is not used in an automatic control system?",
+      "question": "2. Which of the following element is not used in an automatic control system?",
       "answers": {
         "a": "Final control element",
         "b": "Sensor",
@@ -24,7 +24,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "A PID controller is employed to stably control a plant with transfer function  $$G(s)= \frac{1}{(s+2)(s+1)}$$ Now integral gain and proportional gain are increased by factor 3 and factor 2 respectively and derivative gain remains unchaned.Given that the closed loop system remains stable with new gains,the steady state error in tracking a ramp reference signal is______",
+      "question": "3. A PID controller is employed to stably control a plant with transfer function  $$G(s)= \frac{1}{(s+2)(s+1)}$$ Now integral gain and proportional gain are increased by factor 3 and factor 2 respectively and derivative gain remains unchaned.Given that the closed loop system remains stable with new gains,the steady state error in tracking a ramp reference signal is______",
       "answers": {
         "a": "Remains Unchaned",
         "b": "Decreases by factor 2",
@@ -35,7 +35,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "The electric switch to control any electrical equipment will act as,",
+      "question": "4. The electric switch to control any electrical equipment will act as,",
       "answers": {
         "a": "PD Controller",
         "b": "Proportional Controller",
@@ -46,7 +46,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "What is the relationship between the steady-state error, gain and the tendency of oscillations when the controller is supposed to be under the proportional action?",
+      "question": "5. What is the relationship between the steady-state error, gain and the tendency of oscillations when the controller is supposed to be under the proportional action?",
       "answers": {
         "a": "Steady-state error increases with an increase in gain and oscillation tendency",
         "b": "Steady-state error decreases with the decrease in gain and oscillation tendency",
@@ -58,7 +58,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "The input to a controller is",
+      "question": "6. The input to a controller is",
       "answers": {
         "a": "Sensed Signal",
         "b": "Error Signal",
@@ -69,7 +69,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "On-off Control is also called as ________.",
+      "question": "7. On-off Control is also called as ________.",
       "answers": {
         "a": "one position control",
         "b": "two position control",
@@ -80,7 +80,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "Proportional band of the controller is expressed as:",
+      "question": "8. Proportional band of the controller is expressed as:",
       "answers": {
         "a": "Gain",
         "b": "Ratio",
@@ -94,7 +94,7 @@
     
 	
 	{
-      "question": "In which one of the following controllers, the response is fast?",
+      "question": "9. In which one of the following controllers, the response is fast?",
       "answers": {
         "a": "PI",
         "b": "PID",
