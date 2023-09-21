@@ -2,7 +2,7 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "What is the main objective of process control?",
+      "question": "1. What is the main objective of process control?",
       "answers": {
         "a": " to control physical parameters ",
         "b": "to control mechanical parameters",
@@ -13,7 +13,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "What is a process control system?",
+      "question": "2. What is a process control system?",
       "answers": {
         "a": " system to keep the parameters at zero value",
         "b": "system to maintain the parameters constant",
@@ -24,7 +24,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "The on-off controller is a _____ system.",
+      "question": "3. The on-off controller is a _____ system.",
       "answers": {
         "a": "digital",
         "b": "linear",
@@ -35,7 +35,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "The position and velocity errors of a type-2 system are",
+      "question": "4. The position and velocity errors of a type-2 system are",
       "answers": {
         "a": "constant, constant",
         "b": "constant, infinity",
@@ -46,7 +46,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "A temperature control system is known as",
+      "question": "5. A temperature control system is known as",
       "answers": {
         "a": "Process Control System",
         "b": "Servomechanism",
@@ -57,7 +57,7 @@
       "difficulty": "beginner"
     },
 	{
-      "question": "The term hysteresis is associated with",
+      "question": "6. The term hysteresis is associated with",
       "answers": {
         "a": "ON-OFF control",
         "b": "P-control",
@@ -70,7 +70,7 @@
 	
 	
 	{
-      "question": "In a closed loop control system,PI controller is preffered compared to P controller cause.",
+      "question": "7. In a closed loop control system,PI controller is preffered compared to P controller cause.",
       "answers": {
         "a": "Fast Response",
         "b": "High Gains",
@@ -81,7 +81,7 @@
       "difficulty": "beginner"
     },
     {
-	 "question": "The controller ,which is highly sensitive to noice is,",
+	 "question": "8. The controller ,which is highly sensitive to noice is,",
       "answers": {
         "a": "PI",
         "b": "PD",
