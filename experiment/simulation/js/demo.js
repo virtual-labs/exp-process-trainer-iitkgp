@@ -165,7 +165,7 @@ jsPlumb.ready(function () {
 			 //delete clicked connection
       instance.bind("click", function (conn, originalEvent) {
 		  
-           if ( confirm("Delete connection from " + conn.sourceId + " to " + conn.targetId + "?")) {////for clicking on a connection
+           if ( confirm("Delete connection ?")) {////for clicking on a connection
                instance.deleteConnection(conn);			  
 			         }
        }); 
@@ -578,6 +578,9 @@ jsPlumb.ready(function () {
 			   document.getElementById('distance').disabled = false;
 			   document.getElementById('tpl').disabled = false;
 			   document.getElementById('tfl').disabled = false;
+			   
+			   document.getElementById('knob2').style['pointer-events'] = "none";
+			   document.getElementById('knob3').style['pointer-events'] = "none";
 			alert('Right Connection\n Openloop Control');
 			
            }
@@ -590,6 +593,9 @@ jsPlumb.ready(function () {
 			   document.getElementById('distance').disabled = false;
 			   document.getElementById('tpl').disabled = false;
 			   document.getElementById('tfl').disabled = false;
+			   
+			   document.getElementById('knob2').style['pointer-events'] = "none";
+			   document.getElementById('knob3').style['pointer-events'] = "none";
 			   alert('Right Connection\nP-Control');
                 
             }  
@@ -598,12 +604,14 @@ jsPlumb.ready(function () {
 			else if (is_connected_42_44 && is_connected_8_44 && is_connected_45_5 && is_connected_46_43 && is_connected_46_11 && is_connected_2_12 && is_connected_1_13 && is_connected_4_5 && !is_connected_3_44  && !unallowed_connection_present && document.getElementById('mon').src.match("./images/on.png")) {
 		       
 			   document.getElementById('controllerchk').value = 3;
-			   document.getElementById('crtable').disabled = true;
+			   document.getElementById('crtable').disabled = false;
 			   document.getElementById('sserr').disabled = true;
-			   document.getElementById('distance').disabled = true;
-			   document.getElementById('tpl').disabled = true;
-			   document.getElementById('tfl').disabled = true;
-			   alert('Right Connection\nOnOff-Control \n set maximum heater power to 1');
+			   document.getElementById('distance').disabled = false;
+			   document.getElementById('tpl').disabled = false;
+			   document.getElementById('tfl').disabled = false;
+			   document.getElementById('knob2').style['pointer-events'] = "auto";
+			   document.getElementById('knob3').style['pointer-events'] = "none";
+			   alert('Right Connection\nOn-Off Control \n Set maximum heater power to 1');
                 
             }
 			
@@ -611,11 +619,14 @@ jsPlumb.ready(function () {
 		       
 			   document.getElementById('controllerchk').value = 4;
 			   
-			   document.getElementById('crtable').disabled = true;
+			   document.getElementById('crtable').disabled = false;
 			   document.getElementById('sserr').disabled = true;
-			   document.getElementById('distance').disabled = true;
-			   document.getElementById('tpl').disabled = true;
-			   document.getElementById('tfl').disabled = true;
+			   document.getElementById('distance').disabled = false;
+			   document.getElementById('tpl').disabled = false;
+			   document.getElementById('tfl').disabled = false;
+			   
+			   document.getElementById('knob2').style['pointer-events'] = "auto";
+			   document.getElementById('knob3').style['pointer-events'] = "auto";
 			   
 			   alert('Right Connection\nOnOff-Control \n set maximum heater power to 1');
                 
