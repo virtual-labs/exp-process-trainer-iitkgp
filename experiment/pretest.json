@@ -2,56 +2,56 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "1. What is the main objective of process control?",
+      "question": "1. In distributed systems the transportation delays are detrimental to stability due to which of the following reasons ?",
       "answers": {
-        "a": " to control physical parameters ",
-        "b": "to control mechanical parameters",
-        "c": "to control optical parameters",
-        "d": "to control electrical parameters"
+        "a": "They produce transients",
+        "b": "They produce attenuation",
+        "c": "They produce a phase lag",
+        "d": "None of the above"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. Losses in a centrifugal compressor are due to _____",
+      "answers": {
+        "a": "Inlet losses",
+        "b": "Impeller channel losses",
+        "c": "Diffuser losses",
+        "d": "All of the above"
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. Which type of blower is preffered for fluid bed reactor ?",
+      "answers": {
+        "a": "Centrifugal blower",
+        "b": "Positive displacement blower",
+        "c": "Regenerative blower",
+        "d": "Helical screw blower"
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "2. What is a process control system?",
-      "answers": {
-        "a": " system to keep the parameters at zero value",
-        "b": "system to maintain the parameters constant",
-        "c": "system to keep the parameters at highest value",
-        "d": "system to check the voltage"
-      },
-      "correctAnswer": "b",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "3. The on-off controller is a _____ system.",
-      "answers": {
-        "a": "digital",
-        "b": "linear",
-        "c": " non-linear",
-        "d": "discontinuous"
-      },
-      "correctAnswer": "c",
-      "difficulty": "beginner"
-    },
-    {
       "question": "4. The position and velocity errors of a type-2 system are",
       "answers": {
-        "a": "constant, constant",
-        "b": "constant, infinity",
-        "c": "zero, constant",
-        "d": "zero, zero"
+        "a": "Constant, Constant",
+        "b": "Constant, Infinity",
+        "c": "Zero, Constant",
+        "d": "Zero, Zero"
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
     },
     {
-      "question": "5. A temperature control system is known as",
+      "question": "5. The characteristics of the PI controller is _____ gain at ______ frequency.",
       "answers": {
-        "a": "Process Control System",
-        "b": "Servomechanism",
-        "c": "Cascade control system",
-        "d": "None of these"
+        "a": "Infinite, Zero",
+        "b": "Zero, High",
+        "c": "Zero, Low",
+        "d": "None of the above"
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
@@ -70,23 +70,47 @@
 	
 	
 	{
-      "question": "7. In a closed loop control system,PI controller is preffered compared to P controller cause.",
+      "question": "7. In a closed loop control system, PI controller is preffered compared to P controller cause,",
       "answers": {
-        "a": "Fast Response",
-        "b": "High Gains",
+        "a": "Fast response",
+        "b": "High gains",
         "c": "Zero steady state error",
-        "d": "Low Overshoot"
+        "d": "Low overshoot"
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
     },
-    {
+	{
 	 "question": "8. The controller ,which is highly sensitive to noice is,",
       "answers": {
-        "a": "PI",
-        "b": "PD",
-        "c": "Both PI PD",
-        "d": "None"
+        "a": "PI Controller",
+        "b": "PD Controller",
+        "c": "ON-OFF Controller",
+        "d": "None of the above"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+	
+	{
+	 "question": "9. Which of the following is created by blowers?",
+      "answers": {
+        "a": "Air flow",
+        "b": "Water flow",
+        "c": "Wastewater flow",
+        "d": "None of the above"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+	
+	{
+	 "question": "10. What is the purpose of the blowers?",
+      "answers": {
+        "a": "Decrease air flow",
+        "b": "Increase air flow",
+        "c": "Create Vacuum",
+        "d": "None of the above"
       },
       "correctAnswer": "b",
       "difficulty": "beginner"
