@@ -58,7 +58,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "6. Find the values of k<sub>p</sub>, k<sub>i</sub>, k<sub>d</sub> for PID controller whose characteristics equation has real roots at -10, damping ratio &zeta = 0.8 and natural frequency &omega<sub>n<sub> = 2 rad/s.<br/><img src='.images/postq.png'>",
+      "question": "6. Find the values of k<sub>p</sub>, k<sub>i</sub>, k<sub>d</sub> for PID controller whose characteristics equation has real roots at -10, damping ratio &zeta; = 0.8 and natural frequency &omega;<sub>n</sub> = 2 rad/s.<br/><br/><img src='./images/postq.png'>",
       "answers": {
         "a": "k<sub>d</sub> = 1.8, k<sub>p</sub> = 8.75, k<sub>i</sub> = 10",
         "b": "k<sub>d</sub> = 1.8, k<sub>p</sub> = 4, k<sub>i</sub> = 5",
