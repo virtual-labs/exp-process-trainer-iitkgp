@@ -1194,7 +1194,7 @@ if(document.getElementById('P').value==50){
 	} 
 	
 	//for (var t = 50; t < (axes.N); t++) {
-		for (var t = math.round(math.add(math.multiply(math.multiply(nc,2),1),math.divide(axes.N,cyclehlfs))); t<= math.round(math.multiply(2,math.divide(axes.N,cyclehlfs),math.add(((2*nc)/2),1))); t++) {
+		for (var t = math.round(math.multiply(math.add(math.multiply(nc,2),1),math.divide(axes.N,cyclehlfs))); t<= math.round(math.multiply(2,math.divide(axes.N,cyclehlfs),math.add(((2*nc)/2),1))); t++) {
 		
 		var stepVolt = math.multiply(vp,kp);		
 		var delay = math.subtract(t,td);	
@@ -1660,7 +1660,7 @@ function P_Control() {
 	//for (var t= 50; t< axes.N; t++) {
 		//for (var t = math.multiply(math.add(math.multiply(nc,2),1),math.divide(axes.N,cyclehlfs)); t<= math.add(math.multiply(2,math.divide(axes.N,cyclehlfs),math.add(((2*nc)/2),1)),T2); t++) {
 		
-	for (var t = math.round(math.add(math.multiply(math.multiply(nc,2),1),math.divide(axes.N,cyclehlfs))); t<= math.round(math.multiply(2,math.divide(axes.N,cyclehlfs),math.add(((2*nc)/2),1))); t++) {
+	for (var t = math.round(math.multiply(math.add(math.multiply(nc,2),1),math.divide(axes.N,cyclehlfs))); t<= math.round(math.multiply(2,math.divide(axes.N,cyclehlfs),math.add(((2*nc)/2),1))); t++) {
 		
 	/* var stepVolt = parseFloat(vp*kp);
 	var wn = Math.sqrt((parseFloat(1+parseFloat(kp*k)))/(parseFloat(T1*T2)));
@@ -2380,7 +2380,7 @@ if(document.getElementById('P').value==50){
 	
 	//for (var t = 50; t < (axes.N); t++) {
 		//for (var t = math.multiply(math.add(math.multiply(nc,2),1),math.divide(axes.N,cyclehlfs)); t<= math.add(math.multiply(2,math.divide(axes.N,cyclehlfs),math.add(((2*nc)/2),1)),td); t++) {
-		for (var t = math.round(math.add(math.multiply(math.multiply(nc,2),1),math.divide(axes.N,cyclehlfs))); t<= math.round(math.multiply(2,math.divide(axes.N,cyclehlfs),math.add(((2*nc)/2),1))); t++) {
+		for (var t = math.round(math.multiply(math.add(math.multiply(nc,2),1),math.divide(axes.N,cyclehlfs))); t<= math.round(math.multiply(2,math.divide(axes.N,cyclehlfs),math.add(((2*nc)/2),1))); t++) {
 		var stepVolt = math.add(vp,math.random(-0.5,0.5));//math.multiply(vp,kp);		
 		var delay = math.subtract(t,td);	
 		var epow = math.divide(math.subtract(t,td),tau);	 
@@ -2703,7 +2703,7 @@ if(document.getElementById('P').value==100){
 	
 	//for (var t = 50; t < (axes.N); t++) {
 		//for (var t = math.multiply(math.add(math.multiply(nc,2),1),math.divide(axes.N,cyclehlfs)); t<= math.add(math.multiply(2,math.divide(axes.N,cyclehlfs),math.add(((2*nc)/2),1)),td); t++) {
-		for (var t = math.round(math.add(math.multiply(math.multiply(nc,2),1),math.divide(axes.N,cyclehlfs))); t<= math.round(math.multiply(2,math.divide(axes.N,cyclehlfs),math.add(((2*nc)/2),1))); t++) {
+		for (var t = math.round(math.multiply(math.add(math.multiply(nc,2),1),math.divide(axes.N,cyclehlfs))); t<= math.round(math.multiply(2,math.divide(axes.N,cyclehlfs),math.add(((2*nc)/2),1))); t++) {
 		var stepVolt = math.add(vp,math.random(-0.5,0.5));//math.multiply(vp,kp);		
 		var delay = math.subtract(t,td);	
 		var epow = math.divide(math.subtract(t,td),tau);	 
@@ -3090,7 +3090,7 @@ if(document.getElementById('P').value==100){
 	
 	//for (var t = 50; t < (axes.N); t++) {
 		//for (var t = math.multiply(math.add(math.multiply(nc,2),1),math.divide(axes.N,cyclehlfs)); t<= math.add(math.multiply(2,math.divide(axes.N,cyclehlfs),math.add(((2*nc)/2),1)),td); t++) {
-		for (var t = math.round(math.add(math.multiply(math.multiply(nc,2),1),math.divide(axes.N,cyclehlfs))); t<= math.round(math.multiply(2,math.divide(axes.N,cyclehlfs),math.add(((2*nc)/2),1))); t++) {
+		for (var t =math.round(math.multiply(math.add(math.multiply(nc,2),1),math.divide(axes.N,cyclehlfs))); t<= math.round(math.multiply(2,math.divide(axes.N,cyclehlfs),math.add(((2*nc)/2),1))); t++) {
 		var stepVolt = math.add(vp,math.random(-0.5,0.5));//math.multiply(vp,kp);		
 		var delay = math.subtract(t,td);	
 		var epow = math.divide(math.subtract(t,td),tau);	 
