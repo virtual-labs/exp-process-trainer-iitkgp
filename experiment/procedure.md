@@ -4,7 +4,7 @@
 <div align="center">
 <img class="img-fluid"  src="./images/conn2.png" alt="">
 
-<b>Fig. 1. Schematic of the Process Trainer Plant</b>
+<b>Fig. 1. Schematic of the Process Trainer plant</b>
 </div>
 
 
