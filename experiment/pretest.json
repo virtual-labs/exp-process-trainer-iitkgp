@@ -24,7 +24,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "3. Which type of blower is preffered for fluid bed reactor ?",
+      "question": "3. Which type of blower is preferred for fluid bed reactor ?",
       "answers": {
         "a": "Centrifugal blower",
         "b": "Positive displacement blower",
@@ -51,7 +51,7 @@
         "a": "Infinite, Zero",
         "b": "Zero, High",
         "c": "Zero, Low",
-        "d": "None of the above"
+        "d": "Zero, Infinite"
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
@@ -70,7 +70,7 @@
 	
 	
 	{
-      "question": "7. In a closed loop control system, PI controller is preffered compared to P controller cause,",
+      "question": "7. In a closed loop control system, PI controller is preferred compared to P controller cause,",
       "answers": {
         "a": "Fast response",
         "b": "High gains",
@@ -86,7 +86,7 @@
         "a": "PI Controller",
         "b": "PD Controller",
         "c": "ON-OFF Controller",
-        "d": "None of the above"
+        "d": "Integral control action"
       },
       "correctAnswer": "b",
       "difficulty": "beginner"
@@ -98,7 +98,7 @@
         "a": "Air flow",
         "b": "Water flow",
         "c": "Wastewater flow",
-        "d": "None of the above"
+        "d": "Any fluid flow"
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
@@ -110,7 +110,7 @@
         "a": "Decrease air flow",
         "b": "Increase air flow",
         "c": "Create Vacuum",
-        "d": "None of the above"
+        "d": "Increase fluid flow"
       },
       "correctAnswer": "b",
       "difficulty": "beginner"
