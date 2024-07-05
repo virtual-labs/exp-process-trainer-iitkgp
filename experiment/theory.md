@@ -1,6 +1,6 @@
 # Theory
 
-<b>The Process:</b><br/>
+<b>The Process</b><br/>
 
 Air drawn from atmosphere by a centrifugal blower is driven past a heater grid through a length of tubing to atmosphere again.
 The procedure involves raising the temperature of the air flowing through the tube to the desired level. The purpose of the control equipment is to 
