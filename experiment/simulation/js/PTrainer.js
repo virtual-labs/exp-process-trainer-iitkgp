@@ -1426,7 +1426,7 @@ function P_Control() {
 
 	else if(document.getElementById('dischk').value == 1 && document.getElementById('P').value == 50 && document.getElementById('anglvalue').value == 40){//28mm	
 	var T1 = 0.240;   ///lab test data,time constant or transfer lag	
-	var T2 = 0.80;    ///delay time,from lab test or transport lag
+	var T2 = 0.080;    ///delay time,from lab test or transport lag
 	}
 	
 	////////////////////////////////20 degree throttle////////////////////////
@@ -1496,7 +1496,7 @@ function P_Control() {
 
 	else if(document.getElementById('dischk').value == 1 && document.getElementById('P').value == 100 && document.getElementById('anglvalue').value == 60){//28mm	
 	var T1 = 0.280;   ///lab test data,time constant or transfer lag	
-	var T2 = 0.80;    ///delay time,from lab test or transport lag
+	var T2 = 0.080;    ///delay time,from lab test or transport lag
 	}
 	
 	
@@ -1513,7 +1513,7 @@ function P_Control() {
 
 	else if(document.getElementById('dischk').value == 1 && document.getElementById('P').value == 200 && document.getElementById('anglvalue').value == 60){//28mm	
 	var T1 = 0.280;   ///lab test data,time constant or transfer lag	
-	var T2 = 0.80;    ///delay time,from lab test or transport lag
+	var T2 = 0.080;    ///delay time,from lab test or transport lag
 	}
 	
 	
@@ -1531,7 +1531,7 @@ function P_Control() {
 
 	else if(document.getElementById('dischk').value == 1 && document.getElementById('P').value == 50 && document.getElementById('anglvalue').value == 60){//28mm	
 	var T1 = 0.260;   ///lab test data,time constant or transfer lag	
-	var T2 = 0.80;    ///delay time,from lab test or transport lag
+	var T2 = 0.080;    ///delay time,from lab test or transport lag
 	}
 	
 	
@@ -1584,7 +1584,7 @@ function P_Control() {
 
 	else if(document.getElementById('dischk').value == 1 && document.getElementById('P').value == 50 && document.getElementById('anglvalue').value == 80){//28mm	
 	var T1 = 0.180;   ///lab test data,time constant or transfer lag	
-	var T2 = 0.80;    ///delay time,from lab test or transport lag
+	var T2 = 0.080;    ///delay time,from lab test or transport lag
 	}
 	
 	var k = 1;	
@@ -3019,20 +3019,20 @@ if(document.getElementById('P').value==100){
 		var overlap2 = 1.0;
 	} */
 	if(document.getElementById('overlap').value==1){
-		var overlap1 = math.multiply(vp,0.2);
+		var overlap1 = math.multiply(vp,0.25);
 		var overlap2 = math.multiply(vp,1.1);//math.multiply(vp,0.25);
 	}
 	if(document.getElementById('overlap').value==2){
-		var overlap1 = math.multiply(vp,0.3);
+		var overlap1 = math.multiply(vp,0.50);
 		var overlap2 = math.multiply(vp,1.1);
 	}
 	if(document.getElementById('overlap').value==3){
-		var overlap1 = math.multiply(vp,0.6);
+		var overlap1 = math.multiply(vp,0.75);
 		var overlap2 = math.multiply(vp,1.1);
 	}
 	if(document.getElementById('overlap').value==4){
-		var overlap1 = math.multiply(vp,0.8);
-		var overlap2 = math.multiply(vp,1.1);
+		var overlap1 = math.multiply(vp,0.95);
+		var overlap2 = math.multiply(vp,1.0);
 	}
 		
 		
