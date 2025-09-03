@@ -13,7 +13,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "2. The transfer function<br/><img src='./images/postq1.jpg'><br/>in the feedback path, modifies the proportional controller to a ____",
+      "question": "2. The transfer function <br/><img src='./images/postq1.jpg'><br/>in the feedback path, modifies the proportional controller to a ____",
       "answers": {
         "a": "PD Controller",
         "b": "PI Controller",
@@ -24,7 +24,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "3. A PID controller is employed to stably control a plant with transfer function<br/><img src='./images/postq2.jpg'><br/> Now integral gain and proportional gain are increased by factor 3 and factor 2 respectively, derivative gain remains unchanged. Given that the closed loop system remains stable with new gains, the steady state error in tracking a ramp reference signal ______",
+      "question": "3. A PID controller is employed to stably control a plant with transfer function <br/><img src='./images/postq2.jpg'><br/> Now integral gain and proportional gain are increased by factor 3 and factor 2 respectively, derivative gain remains unchanged. Given that the closed loop system remains stable with new gains, the steady state error in tracking a ramp reference signal ______",
       "answers": {
         "a": "Remains Unchaned",
         "b": "Decreases by factor 2",
@@ -93,7 +93,7 @@
     },    
 	
 	{
-      "question": "9. A PI controller is expressed as<br/><img src='./images/postq3.jpg'><br/> The proportional band for the controller is _____",
+      "question": "9. A PI controller is expressed as <br/><img src='./images/postq3.jpg'><br/> The proportional band for the controller is _____",
       "answers": {
         "a": "200 &percnt;",
         "b": "50 &percnt;",

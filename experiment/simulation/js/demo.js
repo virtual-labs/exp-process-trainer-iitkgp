@@ -58,7 +58,7 @@ jsPlumb.ready(function () {
 	// for all live red connection//
         endpoint = {
             anchors: [0.5, 0.5, 0, -1],
-            connectorStyle: { strokeWidth: 8, stroke: "#C50806" },
+            connectorStyle: { strokeWidth: 6, stroke: "#C50806" },
             endpointsOnTop: true,
             isSource: true,
             maxConnections: 100,
@@ -74,7 +74,7 @@ jsPlumb.ready(function () {
 					///black wire
 	endpoint_ground = {
             anchor: [0.5, 0.5, 0, -1],
-            connectorStyle: { strokeWidth: 10, stroke: "black" },
+            connectorStyle: { strokeWidth: 8, stroke: "black" },
             endpointsOnTop: true,
             isSource: true,
             maxConnections: 10,
@@ -90,7 +90,7 @@ jsPlumb.ready(function () {
 					
 			endpoint_blue = {
             anchor: [0.5, 0.5, 0, -1],
-            connectorStyle: { strokeWidth: 10, stroke: "#55DEF6" },
+            connectorStyle: { strokeWidth: 8, stroke: "#55DEF6" },
             endpointsOnTop: true,
             isSource: true,
             maxConnections: 10,
@@ -125,7 +125,7 @@ jsPlumb.ready(function () {
     instance = jsPlumb.getInstance({
         DragOptions: { cursor: 'wait', zIndex: 20 },
         Endpoint: [ "Image", { url: "./images/littledot.png" } ],
-        Connector: [ "Bezier", { curviness:140 } ],
+        Connector: [ "Bezier", { curviness:40 } ],
         Container: "canvas"
     });
 	
@@ -137,8 +137,8 @@ jsPlumb.ready(function () {
         var e1 = prepare("bd1"),            
             e2 = prepare_ground("bd2"),
 			e3 = prepare("bd3"),
-            e4 = prepare_blue("bd4"),
-			e5 = prepare_blue("bd5"),
+            e4 = prepare("bd4"),
+			e5 = prepare("bd5"),
 			e6 = prepare("bd6"),
 			e7 = prepare("bd7"),            
             e8 = prepare("bd8"),
@@ -161,13 +161,42 @@ jsPlumb.ready(function () {
              instance.connect({ source: e2, target: e12 });
 			 instance.connect({ source: e1, target: e13 });
 			// instance.connect({ source: e2, target: e14 });
-			 
+			e1.canvas.style.pointerEvents = "none";///disable first
+			 e1.setEnabled(false);///stop the reconnection
+			 //e2.canvas.style.pointerEvents = "none";///disable first
+			 //e2.setEnabled(false);///stop the reconnection
+			 //e12.canvas.style.pointerEvents = "none";///disable first
+			 //e12.setEnabled(false);///stop the reconnection
+			 e13.canvas.style.pointerEvents = "none";///disable first
+			 e13.setEnabled(false);///stop the reconnection
+						
+			 ///NEW ADDITION TO DISPLAY CONNECTION POINT NUMBERS DURING DELEETE
+		
+		var name1, name2;
 			 //delete clicked connection
       instance.bind("click", function (conn, originalEvent) {
 		  
-           if ( confirm("Delete connection ?")) {////for clicking on a connection
+		    if((conn.sourceId!='bd2' && conn.targetId!='bd12') && (conn.sourceId!='bd1' && conn.targetId!='bd13')){
+				
+				///NEW ADDED FOR LOOP TO DISPLAY ENDPOINT NAMES DURING DELETE CONNECTION
+		 for(var cpoint =1; cpoint<=46; cpoint++){
+			 if(conn.sourceId=='bd'+cpoint){
+				 name1 = document.getElementById(conn.sourceId).getAttribute("name");
+			 }
+			 if(conn.targetId=='bd'+cpoint){ 
+		  name2= document.getElementById(conn.targetId).getAttribute("name");
+		 }
+		 } 
+           if ( confirm('Delete connection from'+' ' + name1 +' '+ 'to' + ' '+ name2 + '?')) {////for clicking on a connection
                instance.deleteConnection(conn);			  
 			         }
+		  }
+		  
+		 /* else if( (conn.sourceId=='bd2' && conn.targetId=='bd12') && (conn.sourceId=='bd1' && conn.targetId=='bd13')){
+			 alert('Default sensor connection can not be deleted');
+		 } */
+		  
+		 
        }); 
 		
   

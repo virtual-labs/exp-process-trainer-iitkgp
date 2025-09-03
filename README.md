@@ -7,7 +7,7 @@
 <b>Discipline | <b> Electrical Engineering 
 :--|:--|
 <b> Lab | <b> **Control and Instrumentation Lab**
-<b> Experiment|     <b> **Study and operation of the Process Trainer setup**
+<b> Experiment|     <b> **Study and Operation of the Process Trainer Setup**
 
 
 ### About the Experiment 
