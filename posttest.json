@@ -1,0 +1,120 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. The PID controller is a _______",
+      "answers": {
+        "a": "Lag compensator",
+        "b": "Lag–Lead compensator",
+        "c": "Lead compensator",
+        "d": "None of the above"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. The transfer function <br/><img src='./images/postq1.jpg'><br/>in the feedback path, modifies the proportional controller to a ____",
+      "answers": {
+        "a": "PD Controller",
+        "b": "PI Controller",
+        "c": "Integral Controller",
+        "d": "Derivative controller"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. A PID controller is employed to stably control a plant with transfer function <br/><img src='./images/postq2.jpg'><br/> Now integral gain and proportional gain are increased by factor 3 and factor 2 respectively, derivative gain remains unchanged. Given that the closed loop system remains stable with new gains, the steady state error in tracking a ramp reference signal ______",
+      "answers": {
+        "a": "Remains Unchaned",
+        "b": "Decreases by factor 2",
+        "c": "Decreases by factor 3",
+        "d": "Decreases by factor 5"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4. The electric switch to control any electrical equipment will act as,",
+      "answers": {
+        "a": "PD Controller",
+        "b": "Proportional Controller",
+        "c": "PID Controller",
+        "d": "ON-OFF Controller"
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "5. What is the relationship between the steady-state error, gain and the tendency of oscillations when the controller is supposed to be under the proportional action ?",
+      "answers": {
+        "a": "Steady-state error increases with an increase in gain and oscillation tendency",
+        "b": "Steady-state error decreases with the decrease in gain and oscillation tendency",
+		"c": "Steady-state error decreases with an increase in gain and oscillation tendency",
+        "d": "Steady-state error increases with the decrease in gain and oscillation tendency"
+        
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "6. Find the values of k<sub>p</sub>, k<sub>i</sub>, k<sub>d</sub> for PID controller whose characteristics equation has real roots at -10, damping ratio &zeta; = 0.8 and natural frequency &omega;<sub>n</sub> = 2 rad/s.<br/><br/><img src='./images/postq.png'>",
+      "answers": {
+        "a": "k<sub>d</sub> = 1.8, k<sub>p</sub> = 8.75, k<sub>i</sub> = 10",
+        "b": "k<sub>d</sub> = 1.8, k<sub>p</sub> = 4, k<sub>i</sub> = 5",
+        "c": "k<sub>d</sub> = 3.6, k<sub>p</sub> = 8, k<sub>i</sub> = 20",
+        "d": "k<sub>d</sub> = 1.8, k<sub>p</sub> = 8, k<sub>i</sub> = 20"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "7. The on-off control is also called as ________.",
+      "answers": {
+        "a": "One position control",
+        "b": "Two position control",
+        "c": "Four position control",
+        "d": "Half position control"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "8. What is the value of gain if the proportional band setting is 195 &percnt;",
+      "answers": {
+        "a": "0.87",
+        "b": "0.95",
+        "c": "0.51",
+        "d": "0.36"
+        
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },    
+	
+	{
+      "question": "9. A PI controller is expressed as <br/><img src='./images/postq3.jpg'><br/> The proportional band for the controller is _____",
+      "answers": {
+        "a": "200 &percnt;",
+        "b": "50 &percnt;",
+        "c": "100 &percnt;",
+        "d": "25 &percnt;"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+	
+	{
+      "question": "10. If the flow of air through the compressor is perpendicular to its axis, then it is a _____",
+      "answers": {
+        "a": "Reciprocating compressor",
+        "b": "Centrifugal compressor",
+        "c": "Turbo compressor",
+        "d": "Axial flow compressor"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    }
+	
+  ]
+}
