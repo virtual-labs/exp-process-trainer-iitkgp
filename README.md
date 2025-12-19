@@ -1,24 +1,40 @@
 ## Introduction
 
+<div align="center">
+<img src="experiment/images/iitkgp.png" width="10%">
+</div>
 
-<b>Discipline | <b>Fill your discipline name here
+<b>Discipline | <b> Electrical Engineering 
 :--|:--|
-<b> Lab | <b> Fill your lab name here
-<b> Experiment|     <b> Fill your experiment name and number here
+<b> Lab | <b> **Control and Instrumentation Lab**
+<b> Experiment|     <b> **Study and Operation of the Process Trainer Setup**
+
 
 ### About the Experiment 
+**System description**
 
-Fill a brief description of this experiment here
+Air is pulled from the atmosphere using a centrifugal blower and directed through a heater grid along a length of tubing before being 
+released back into the atmosphere. This process involves heating the air flowing in the tube to achieve the desired temperature. 
+The control equipment's role is to gauge the air temperature, compare it against the operator's set value and produce a control signal. 
+This signal regulates the amount of electrical power supplied to a correcting element, specifically a heater positioned near the blower. 
+The range of temperature variation is from the ambient level to 60&deg;C. A block diagram of the system is shown in Fig. 1.
 
-<b>Name of Developer | <b> Fill the name of experiment owner here 
+<div align="center">
+<img class="img-fluid"  src="experiment/images/plant_box2.png" alt=""><br>
+<b>Fig. 1. Block diagram of the experimental setup</b> 
+</div>
+
+
+<b>Subject matter expertise | <b> **Prof. Alok Kanti Deb**
 :--|:--|
-<b> Institute | <b>  
-<b> Email id|     <b>  
-<b> Department |  
+<b> Institute | <b>  **Indian Institute of Technology Kharagpur**
+<b> Email id|     <b>  **alokkanti@ee.iitkgp.ac.in**
+<b> Department |  **Department of Electrical Engineering**
+<b>Webpage| <b> http://www.iitkgp.ac.in/department/EE/faculty/ee-alokkanti
 
 ### Contributors List
 
-SrNo | Name | Faculty or Student | Department| Institute | Email id
+SrNo | Name | VLabs Developer or Integration Engineer | Designation | Department| Institute
 :--|:--|:--|:--|:--|:--|
-1 | . | . | . | . | .
-2 | . | . | . | . | .
+1 | **Piyali Chattopadhyay** | Developer | Project Scientist | Department of Electrical Engineering | IIT Kharagpur | 
+2 | **Subhasis Mahata** | Integration Engineer | Senior Project Scientist | Department of Mechanical Engineering | IIT Kharagpur |

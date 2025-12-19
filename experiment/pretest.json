@@ -2,37 +2,117 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "1. In distributed systems the transportation delays are detrimental to stability due to which of the following reasons ?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "They produce transients",
+        "b": "They produce attenuation",
+        "c": "They produce a phase lag",
+        "d": "None of the above"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. Losses in a centrifugal compressor are due to _____",
+      "answers": {
+        "a": "Inlet losses",
+        "b": "Impeller channel losses",
+        "c": "Diffuser losses",
+        "d": "All of the above"
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. Which type of blower is preferred for fluid bed reactor ?",
+      "answers": {
+        "a": "Centrifugal blower",
+        "b": "Positive displacement blower",
+        "c": "Regenerative blower",
+        "d": "Helical screw blower"
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "4. The position and velocity errors of a type-2 system are",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Constant, Constant",
+        "b": "Constant, Infinity",
+        "c": "Zero, Constant",
+        "d": "Zero, Zero"
       },
       "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "5. The characteristics of the PI controller is _____ gain at ______ frequency.",
+      "answers": {
+        "a": "Infinite, Zero",
+        "b": "Zero, High",
+        "c": "Zero, Low",
+        "d": "Zero, Infinite"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+	{
+      "question": "6. The term hysteresis is associated with",
+      "answers": {
+        "a": "ON-OFF control",
+        "b": "P-control",
+        "c": "PI-control",
+        "d": "PID-control"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },	
+	
+	
+	{
+      "question": "7. In a closed loop control system, PI controller is preferred compared to P controller cause,",
+      "answers": {
+        "a": "Fast response",
+        "b": "High gains",
+        "c": "Zero steady state error",
+        "d": "Low overshoot"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+	{
+	 "question": "8. The controller ,which is highly sensitive to noice is,",
+      "answers": {
+        "a": "PI Controller",
+        "b": "PD Controller",
+        "c": "ON-OFF Controller",
+        "d": "Integral control action"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+	
+	{
+	 "question": "9. Which of the following is created by blowers?",
+      "answers": {
+        "a": "Air flow",
+        "b": "Water flow",
+        "c": "Wastewater flow",
+        "d": "Any fluid flow"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+	
+	{
+	 "question": "10. What is the purpose of the blowers?",
+      "answers": {
+        "a": "Decrease air flow",
+        "b": "Increase air flow",
+        "c": "Create Vacuum",
+        "d": "Increase fluid flow"
+      },
+      "correctAnswer": "b",
       "difficulty": "beginner"
     }
   ]

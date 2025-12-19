@@ -1,13 +1,971 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<!-- Add CSS at the head of HTML file -->
-    <link rel="stylesheet" href="./css/main.css">
-</head>
-<body>
-		<!-- Your code goes here-->
+<!-- This HTML page and script files are developed by
+    Piyali Chattopadhyay
+    Project Scientist-Technical,
+    Virtual Labs IIT Kharagpur.-->
 
-	<!-- Add JS at the bottom of HTML file --> 
-        <script src="./js/main.js"></script>
-</body>
-</html>
+<!DOCTYPE html>
+<html lang="en"><!--html tag start-->
+<head>
+    <title>Study and Operation of the Process Trainer Setup</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/adik.css" rel="stylesheet">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <!-- <script  src="./js/process_Trainer_updated.js">   </script> -->
+  <script  src="./js/PTrainer.js"></script>
+  
+	
+ <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.2.1/math.js"></script>
+  <script src=" https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.2.1/math.min.js  "></script>
+ <script src="https://unpkg.com/mathjs/lib/browser/math.js"></script>
+ 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-Knob/1.2.13/jquery.knob.min.js"></script>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"> </script>
+
+
+<link rel="stylesheet" href=
+"https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+<link rel="stylesheet" href="./css/process_Trainer.css">
+<link rel="stylesheet" href="./css/demo.css">
+
+
+
+  <style>
+		canvas {
+	
+	max-width:100%;
+	}
+	.dnob {
+	
+position: absolute;
+cursor:pointer;
+    border: 2px solid #212221;
+    border-radius: 50%;
+    background-color: #040605;
+    background-image: linear-gradient(90deg, #8c958d, #d7e9da);
+    box-shadow: 5px 5px 8px #D9DBDB;
+}
+
+.dh {
+	
+position:absolute;
+cursor:pointer;
+background-color: black;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+@-webkit-keyframes glow {
+  from {
+    text-shadow:  0 0 20px #fff, 0 0 30px #0867DF;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #023474;
+  }
+}
+
+
+	
+	
+	
+	
+	
+  </style>
+  
+  
+  
+</head>
+
+<body><!--body tag start-->
+    <div class="container p-3 my-3 text-primary text-center border"><!--First Container under body tag start-->
+        <div class="row"><!--First row under 1st container start-->
+            <div class="col-md-3"><!--First col under 1st row start-->
+                <img class="img-fluid rounded" src="./images/vlabs.png" alt="VLabs logo">
+            </div><!--First col under 1st row end-->
+            <div class="col-md-6"><!--2nd col under 1st row start-->
+                <p class="display-1"> <b> Virtual Labs <br> IIT Kharagpur </b> </p>
+            </div><!--2nd col under 1st row end-->
+            <div class="col-md-3"><!--3rd col under 1st row start-->
+                <img class="img-fluid rounded" src="./images/iitkgp.png" alt="IIT KGP Logo" >
+            </div><!--3rd col under 1st row end-->
+        </div><!--First row under 1st container end-->
+    
+        <hr>
+        <div class="row"><!--2nd row under 1st container start-->
+            <div class="col-md-3"><!--First col under 2nd row start-->
+
+            </div><!--First col under 2nd row end-->
+            <div class="col-md-6"><!--2nd col under 2nd row start-->
+                <p class="h1"> <b>Simulation</b> </p>
+            </div><!--2nd col under 2nd row end-->
+            <div class="col-md-3"><!--3rd col under 2nd row start-->
+
+            </div><!--3rd col under 2nd row end-->
+        </div><!--2nd row under 1st container end-->
+        <hr>
+        
+    </div><!--First Container under body tag end-->
+    
+	
+    <div class="container p-3 my-5 text-left border"><!--3rd Container under body tag start-->
+      <div class="row"><!--First row under 3rd container start-->
+        <div class="col-md-1"></div><!--First col under 3rd container start& end-->
+        <div class="col-md-10"><!--2nd col under 3rd container start-->
+            <p class="text-center bg-success"> <a class="nav-link" data-bs-toggle="tab"  id="instcontrol" style="background-color:#128BD9"  ><span class=" h3 text-dark"> Instructions </span></a>
+              <div id="inst" style="display:block;height:200px;overflow-y:auto;text-align:justify">
+					<ol>
+					<b>Open loop-Control</b>
+					
+                      <li><ul><li>First make the wire connection properly through the connecting dots (black dots) in the process trainer kit and in the oscilloscope section following the below instructions.</li>
+					  <li><b>Note:</b> Example: connection point 1 - connection point 2 (drag the wire from connection point 1 by pressing left mouse button and release on connection point 2).</li>
+					  <li>1-Channel-1, D-Channel-1, Ground-2, Ground-11, Y-Channel-2 for open loop control.</li>
+					  <li><b>Note:</b> Any wire connection can be deleted by clicking on the connected wire if required.</li>
+					  </ul></li></br>
+  
+					  <li><ul><li>Click on 'Check Connection' button to check whether the connection is proper or not.</li>
+					  <li>Click on the toggle switch (beside the kit) to switch on the process trainer kit.</li>
+					  <li>The led will glow. Now click on the 'Power' button to switch on the oscilloscope.</li></ul></li><br/>
+					  
+					  <li><ul><li>Click on the clockwise arrow sign of 'Change Angle' button to increase the throttle angle of air blower to 40 &deg;.</li>
+					  <li>Angle value will be shown in the yellow box beside.</li>
+					  <li>Provide a set value temperature of 40&deg;C by rotating the 'set value' knob (rotate knob &approx; to 5.5).</li>
+					  <li>Apply 100 &percnt; proportional band by rotating the 'proportional band' knob on.</li>
+					  <li><b>Note:</b> To rotate any knob put the mouse cursor on the knob handle (black line on the knob), a hand symbol will be showing. Press left mouse button, rotate clockwise to increase or anticlockwise to decrease values.</li>
+					  <li><b>Note:</b> If the desired value does not appear while rotating the knob in one attempt, try rotating it back and forth to reach the correct value. If the knob becomes unresponsive at any time, please refresh the page and repeat the experiment.</li>
+					  </ul></li><br/>
+					 
+					 <li> Click on "Square" button (twice) to observe input signal. Apply amplitude to 2 V<sub>p-p</sub>, frequency 0.2 Hz. </li></br>
+					 
+					 <li><ul><li>Now click on 'Output' button to observe the output signal for the particular throttle angle and sensor probe distance from the heater.</li>
+					 <li>Channel-1 will show the input, Channel-2 will show the output and 'Dual' shows both of them.</li>
+					 <li>Click on 'Show Table' button to get the observation data.</li></ul></li><br/>
+					 
+					 <li><ul><li>The experiment can be done for three distances between sensor probe and heater (279 mm farthest distance, 140 mm middle one, 28 mm closest one).</li>
+					 <li>After experiment is done for one distance (i.e. 279 mm), drag the cap from the 140 mm box to the 'keep here the duct caps' box and drop there.</li>
+					 <li>Then drag the sensor cap (colored one) from 279 mm box to 140 mm box and drop there. Connect the black wire with it (drag from it's previous position or point 3 , drop on the cap in 140 mm box).</li>
+					 <li>Then again put the cap from 'keep here the duct caps' box to 279 mm box.</li>
+					 <li>Now follow steps 4-5 for same throttle angle but different distance to observe the output signal as well as observation table.</li></ul><br/> 
+					 
+					 <li> Once it is done again follow steps 4-6 for 28 mm distance by moving the sensor cap (colored one) from 140 mm box to 28 mm box.</li><br/>
+					 
+					 <li><ul><li>For one throttle angle there will be three observations (since sensor can be put in three successive distances).</li>
+					 <li>Now click on 'Clear' button and Check output for 60, 80 &deg; angle following steps 3-7.</li>
+					 <li>Bring the blower angle to 40 &deg;, clicking on anticlockwise arrow sign on 'Change Angle' button. Switch off the oscilloscope.</li></ul></li><br/>
+					 
+					<br><br>
+					</ol>
+
+					<ol >
+					<b>Proportional-Control</b>
+					
+                      <li><ul><li>First make the wire connection properly through the connecting dots (black dots) in the process trainer kit and in the oscilloscope section following the below instructions.</li>
+					  <li>1-Channel-1, D-Channel-1, Ground-2, Ground-11, Y-Channel-2 and X-Y for proportional control.</li></ul></li></br>
+  
+					  <li>Click on 'Check Connection' button to check whether the connection is proper or not. Now click on the 'Power' button to switch on the oscilloscope.</li><br/>
+					  
+					  <li><ul><li>Click on the clockwise arrow sign of 'Change Angle' button to increase the throttle angle of air blower to 40 &deg;.</li>
+					  <li>Angle value will be shown in the yellow box beside.</li>
+					  <li>Apply 100 &percnt; proportional band by rotating the 'proportional band' knob.</li></ul></li><br/>
+					 
+					 <li>Click on "Square" button (twice) to observe input signal. Apply amplitude to 2 V<sub>p-p</sub>, frequency 0.2 Hz. </li></br>
+					 
+					 <li><ul><li>Now click on 'Output' button to observe the output signal for the particular throttle angle and sensor probe distance from the heater.</li>
+					 <li>Channel-1 will show the input, Channel-2 will show the output and 'Dual' shows both of them.</li>
+					 <li>Click on 'Show Table' button to get the observation data.</li></ul></li><br/>
+					 
+					 <li><ul><li>The experiment can be done for three distances between sensor probe and heater (279 mm farthest distance, 140 mm middle one, 28 mm closest one).</li>
+					 <li>After experiment is done for one distance (i.e. 279 mm), drag the cap from the 140 mm box to the 'keep here the duct caps' box and drop there.</li>
+					 <li>Then drag the sensor cap (colored one) from 279 mm box to 140 mm box and drop there. Connect the black wire with it (drag from it's previous position or point 3, drop on the cap in 140 mm box).</li>
+					 <li>Then again put the cap from 'keep here the duct caps' box to 279 mm box.</li>
+					 <li>Now follow steps 4-5 for same throttle angle but different distance to observe the output signal as well as observation table.</li></ul></li><br/> 
+					 
+					 <li>Once it is done again follow steps 4-6 for 28 mm distance by moving the sensor cap (colored one) from 140 mm box to 28 mm box.</li><br/>
+					 
+					 <li>Vary proportional band to 50, 200 &percnt;  and follow steps 4-7 to observe respective outputs. </li><br/>
+					 
+					 <li><ul><li>For one throttle angle and one proportional band there will be three observations (since sensor can be put in three successive distances).</li>
+					 <li>Now click on 'Clear' button. Angle can be changed to 60, 80 &deg; and observe output for different angles as well as different proportional bands following steps 3-7.</li>
+					 <li>Bring the blower angle to 40 &deg;, clicking on anticlockwise arrow sign on 'Change Angle' button.</li>
+					 <li>Set the proportional band knob to 100 percent by rotating the 'proportional band' knob. Switch off the oscilloscope.</li></ul> </li><br/>
+					<br><br>
+					</ol>
+					
+					
+					<ol >
+					<b>On-Off Control</b>
+					
+                      <li><ul><li>First make the wire connection properly through the connecting dots (black dots) in the process trainer kit and in the oscilloscope section following the below instructions.</li>
+					  <li>1-Channel-1, D-Channel-1, Ground-2, Ground-11, Y-Channel-2, X-Y and click on the toggle switch in the right side of continous control to direct it towards two-step control.</li></ul></li></br>
+  
+					  <li>Click on 'Check Connection' button to check whether the connection is proper or not. Now click on the 'Power' button to switch on the oscilloscope.</li><br/>
+					  
+					  <li><ul><li>Provide maximum heater power to 1 by rotating the 'max heater power' knob.</li>
+					  <li>Click on the clockwise arrow sign of 'Change Angle' button to increase the throttle angle of air blower to 40 &deg;.</li>
+					  <li>Angle value will be shown in the yellow box beside.</li>
+					  <li>Apply 100 &percnt; proportional band by rotating the 'proportional band' knob.</li></ul></li><br/>
+					 
+					 <li>Click on "Square" button (twice) to observe input signal. Apply amplitude to 2 V<sub>p-p</sub>, frequency 0.2 Hz. </li></br>
+					 
+					 <li><ul><li>Now click on 'Output' button to observe the output signal for the particular throttle angle and sensor probe distance from heater.</li>
+					 <li>Channel-1 will show the input, Channel-2 will show the output and 'Dual' shows both of them.</li>
+					 <li>Click on 'Show Table' button to get the observation data.</li></ul></li><br/> 
+
+					 <li><ul><li>Delete the connection of D-Channel-1 by clicking on the connected wire and connect C-Channel-1.</li>
+					 <li>Click on 'Check Connection' button.</li>
+					 <li>Now click on "Square" button to observe output of the controller.</li></ul></li><br/>
+					 
+					<li><ul><li>Click on 'Clear' button. Now increase the overlap value to 1 by rotating the 'overlap' knob.</li>
+					<li>Click on 'Square' and 'Output' button to observe controller output and the output signal respectively for the particular throttle angle and sensor probe distance from the heater.</li></ul></li><br/>
+					
+					<li>Again follow step 7 with overlap value 2, 3, 4 and observe the controller output. With increase in overlap value the controller output will be more smooth.</li><br/>
+					
+					
+					<li><ul><li>The experiment can be done for three distances between sensor probe and heater (279 mm farthest distance, 140 mm middle one, 28 mm closest one).</li>
+					<li>After experiment is done for one distance (i.e. 279 mm), drag the cap from the 140 mm box to the 'keep here the duct caps' box and drop there.</li>
+					<li>Then drag the sensor cap (colored one) from 279 mm box to 140 mm box and drop there. Connect the black wire with it (drag from it's previous position or point 3, drop on the cap in 140 mm box).</li>
+					 <li>Then again put the cap from 'keep here the duct caps' box to 279 mm box.</li>
+					 <li>Now check the controller output and the output signal for 140 mm distance between sensor probe and heater following steps 4-8 again.</li> 
+					 <li>Similerly check the controller output and the output signal for 28 mm distance between sensor probe and heater following steps 4-8.</li></ul></li><br/>
+										
+					<li>Bring set value to zero by rotating the 'set value' knob. Bring 'max heater power knob' to zero. Switch off the oscilloscope and trainer kit. </li><br/>
+					 
+
+					
+		   </ol>
+		   </div>
+            </p> 
+          </div><!--2nd col under 3rd container end-->
+		  
+        <div class="col-md-1"></div><!--3rd col under 3rd container start& end-->
+      </div><!--First row under 3rd container end-->
+    </div><!--3rd Container under body tag end-->
+	
+    <div class="container p-3 my-5 text-center border" id="canvas" ><!--Fourth container under body tag start-->
+	
+<div class="row ">
+	<div class="col-md-1"></div>
+	
+	
+		<div class="col-md-5" style="border:2px dotted #22B2E8">
+				<span style="color:black;font-weight:bold;">OSCILLOSCOPE</span><br/>
+				
+				<center><canvas id="mycanvas" width="430" height="350"  style="border:1px solid #157DA4"></canvas></center>
+				
+				
+				
+				
+
+				<div style="width:100%;border:2px dotted #22B2E8">
+				
+				 <button type="button" id="onff" onclick="mainswt()" value="off" class="btn btn-danger" disabled=disabled >Power</button>
+				
+				<!--<button type="button" id="sin" onclick="drawsine()"  class="btn btn-success " >Sine</button>-->
+				<button type="button" id="sqr" onclick="drawsqr()"  class="btn btn-primary "disabled=disabled >Square</button>
+				<button type="button" id="sqrout" onclick="drawsqrout()"  class="btn btn-primary " disabled=disabled>Output</button>
+				<button type="button" id="in" onclick="drawsqr()"  class="btn btn-primary "disabled=disabled >Channel-1</button>
+				<button type="button" id="out" onclick="drawsqrout()"  class="btn btn-primary "disabled=disabled >Channel-2</button>
+				<button type="button" id="inout" onclick="dual()"  class="btn btn-primary "disabled=disabled >Dual</button>
+				</div>
+	
+	
+	
+				
+		</div>
+		
+		
+		<div class="col-md-5" style="border:2px dotted #22B2E8; text-align:center">
+		<span style="color:blue;font-weight:bold;">Observation</span><br/>
+		
+		
+		<br/><br/>
+				<span style="float:right;text-align:center">&nbsp; &percnt; Steady-state Error</span>
+				<input type="number" id="sserr" value="0" style="position:absolute;left:60%;text-align:center"readOnly=readOnly><br/>
+				
+				<br/>
+				<span style="float:right;text-align:center">&nbsp; Distance (mm)</span>
+				<input type="number" id="distance" value="0" style="position:absolute;left:60%;text-align:center"readOnly=readOnly><br/>
+				
+				<br/>
+				<span style="float:right;text-align:center">&nbsp; Transport Lag (ms)</span>
+				<input type="number" id="tpl" value="0" style="position:absolute;left:60%;text-align:center"readOnly=readOnly><br/>
+				
+				<br/>
+				<span style="float:right;text-align:center">&nbsp; Transfer Lag (ms)</span>
+				<input type="number" id="tfl" value="0" style="position:absolute;left:60%;text-align:center"readOnly=readOnly><br/>
+				
+				
+				<br/>
+				<!--<button class="btn btn-success" id="calc" onclick="calc()">Calculate</button>
+				<span style="float:right;text-align:center">Settling Time(t<sub>s</sub>)</span>
+				<input type="number" id="ts" value="0" style="float:right;text-align:center"readOnly=readOnly>-->
+		</div>		
+		
+		<div class="col-md-1"></div>
+		</div>
+		
+		<div class="row  ">
+		<div class="col-md-1"></div>
+		<div class="col-md-10" >
+				
+			<div style="width:100%;min-width:300px;border:2px dotted #22B2E8">
+			
+			        <span style="color:blue">Function Generator Controls</span><br/>
+					
+							<div class="d-inline-flex p-2">
+							
+							<div class="p-4 " >
+                                <input type="number" id="fq-knob-fng"  value="0.2" readOnly="false" oninput="freqfng()">
+								<br/>
+                                <label>Frequency (Hz)</label>                            
+							</div>
+							
+							<div class="p-4 " >
+                                <input type="number" id="amp-knob-fng" readOnly="false"  value="2" oninput="ampfng()">
+								<br/>
+                                <label>Amplitude (Volt)</label>
+							</div>
+							</div>
+							
+							<div class="d-inline-flex p-2">
+							<div class="p-4 " >                                
+							<div id="bd42" name="1"></div><br>
+							1
+							</div>
+							
+							<div class="p-4 " >
+							<div id="bd43" name="2"></div><br>
+							2
+							</div>
+							
+							</div>
+							
+							
+						<!--<div align="center" class="col-md-5">
+							<input class="preset1" type="range" min="0" max="10" value="1" data-width="80" data-height="80" data-angleOffset="220" data-angleRange="280" id="av">
+							<h6>V<sub>i</sub> = <span id="vi"></span> V </h6>                     
+					    </div>                  
+						
+						<div align="center"class=" col-md-5">
+                        <input class="preset1 " type="range" min="50" max="60" step="10" data-width="80" data-height="80" data-angleOffset="-45" data-angleRange="90" id="fv">
+						<h6>f = <span id="f"></span> Hz</h6>
+						</div>-->
+				</div>						
+				
+						
+		</div>
+		<div class="col-md-1"></div>
+		
+	</div>
+	
+	<div class="row  ">
+		<div class="col-md-1"></div>
+		<div class="col-md-10" >
+				
+			<div style="width:auto;min-width:300px;border:2px dotted #22B2E8">
+			
+			        <span style="color:blue">Oscilloscope Controls</span><br/><br/>
+					
+				<div class="d-inline-flex p-2">
+				
+				<div class="p-4 " style="border-right:2px solid black">
+				   <input type="text" id="amp-knob1" value="1" readOnly="false" oninput="amp1pdiv()">				   
+                   <input type="text"  id="positiony1" value="0" readOnly="false"  oninput="posiy1chnge()"  style="cursor:pointer;">
+				<br/>
+				<label>Volt (V)/div</label>
+				<br/>
+				<label id="positnlabely1">Position-Y</label>
+				<br/>
+				<label id="positnlabelch1">Channel 1</label>				
+				</div>
+   
+				<div class="p-4" style="border-right:2px solid black">
+				   <input type="text" id="amp-knob2"  value="1" readOnly="false" oninput="amp2pdiv()">				   
+    			   <input type="text"  id="positiony2" value="0" readOnly="false"  oninput="posiy2chnge()"  style="cursor:pointer;">
+				   <br/>
+				   <label>Volt (V)/div</label>
+				   <br/>
+				   <label id="positnlabely2">Position-Y</label>
+				   <br/>
+				   <label id="positnlabelch2" >Channel 2</label>
+				</div>
+				</div>
+				
+				<div class="d-inline-flex p-2"> 
+				<div class="p-4 ">			   
+				  <!-- <input  type="text"  id="positionx" min="-360" max="360" step="90"  value="0" oninput="posix2chnge()"  style="cursor:pointer;"> -->
+                    <input type="text" id="fq-knob"  value="500"  readOnly=false oninput="timepdiv()">
+					<br/>
+					<!-- <label id="positnlabelx">Position-X</label>    
+					<br/> -->
+                   <label>Time(ms)/div</label>
+				</div>
+				
+                </div> 
+
+				<div class="d-inline-flex p-2">
+							<div class="p-4 " >                                
+							<div id="bd44" name="Channel-1"></div><br>
+							Channel-1
+							</div>
+							
+							<div class="p-4 " >
+							<div id="bd45" name="Channel-2"></div><br>
+							Channel-2
+							</div>
+							
+							<div class="p-4 " >
+							<div id="bd46" name="Ground"></div><br>
+							Ground
+							</div>
+							
+							</div>				
+				
+			</div>				
+		</div>
+		<div class="col-md-1"></div>
+		
+	</div>
+
+	
+		<div class="row my-5 gy-2"><!--- 1st row under fourth container start--->
+		
+			
+        
+			<div class="col-md-12" ><!--1st col under 1st row start -->
+				  <!-- Code Start here--> 
+				<div class="img-container"><!--img container div start-->
+				
+					<div id="bd1"></div> 
+					<div id="bd2" name="3"></div><!--bd2 in kit is depicted as point 3 in page-->
+					<div id="bd3" name="C"></div>
+					<div id="bd4" name="X"></div>
+					<div id="bd5" name="Y"></div>
+					<div id="bd6" name="A"></div> 
+					<div id="bd7" name="B"></div>
+					<div id="bd8" name="D"></div>
+					<div id="bd9" name="Trigger CRO"></div>
+					<div id="bd10" name="10"></div>
+					<div id="bd11" name="11"></div> 
+					<div id="bd13"></div> 
+					
+					<span style="position:absolute;top:45%;left:72%;color:red;font-weight:bold">3</span>
+					<span style="position:absolute;top:86%;left:82%;color:red;font-weight:bold">10</span>
+					<span style="position:absolute;top:87%;left:12%;color:red;font-weight:bold">11</span>
+				
+					<img class="img-fluid " id="plant" src="images/plant.png " />					
+					
+					<img class="img-fluid " id="mon" onclick="motoron()" src="images/off.png " />
+					<img class="img-fluid " id="pon"  src="images/off.png " />
+					<img class="img-fluid " id="dial"  src="images/dial.png " />
+					<img class="img-fluid " id="rr"  src="images/off.png " />
+					
+					<img class="img-fluid " id="sidesw" onclick="box_on()" value = "1" src="./images/side_off.png " />
+					<img class="img-fluid " id="sideled"  src="images/ledoff.png " />
+					<img class="img-fluid " id="pointer"  src="images/pointer.png " />
+					<img class="img-fluid " id="pointer2"  src="images/pointer.png " />
+					
+					<div><img class="img-fluid " id="angle"  src="images/chanda.png " /></div>
+					<button type="button" id="chng_angl"  class="btn btn-info" >
+					 <i class="bi bi-arrow-clockwise"  id="plus" onclick="rotateChanda()" style="color:red;font-weight:bold"></i>Change Angle <i class="bi bi-arrow-counterclockwise"  id="minus" onclick="rotateChandarev()" style="color:red;font-weight:bold;pointer-events:none"></i>
+					</button>
+					<input type="number" id="anglvalue" min="20" value="20" max="90" step="10" readOnly=readOnly>
+					
+					<div id="opener" ></div>
+					
+					<div id="openning"></div>
+					
+					
+					<!--<div id="rect" ></div>-->
+					<div id = "div1" ondrop="drop(event)" ondragover="allowDrop(event)" style="width:16%;height:20%;border:2px dotted powderblue;color:grey">279 mm
+					
+					<div id="bd12" name="Point on sensor cap"></div> 
+					<img class="img-fluid " id="sensor1" src="images/sensor_actual.png " draggable="true" ondragstart="drag(event)" />	
+					
+					</div>
+					
+					<div id = "div2" ondrop="drop(event)" ondragover="allowDrop(event)" style="width:16%;height:20%;border:2px dotted powderblue;color:grey">140 mm
+					
+					 
+					<img class="img-fluid " id="sensor2" src="images/sensor.png " draggable="true" ondragstart="drag(event)" />
+					
+					</div>
+					
+					<div id = "div3" ondrop="drop(event)" ondragover="allowDrop(event)" style="width:16%;height:20%;border:2px dotted powderblue;color:grey">28 mm	
+					
+					 
+					<img class="img-fluid " id="sensor3" src="images/sensor.png " draggable="true" ondragstart="drag(event)"/>
+					
+					</div>
+					
+					<div id = "div4" ondrop="drop(event)" ondragover="allowDrop(event)" style="width:16%;height:20%;border:2px dotted powderblue;color:grey">	
+					
+					keep here the duct caps
+					</div>
+					
+					
+					
+					
+				
+				<!---knob 1 1st col 1st row--------->
+		<!-- <div class="bluedot" id="knob1" style=" width:7%;height:10%;top:47%;left:43%;pointer-events:none;">
+		<div class="handlep" id="knob1p" onclick="rotate1()"style="width:30%;height:30%;top:33%;left:0%;"></div>
+		<div class="handlen" id="knob1n"onclick="rotate2()" style="width:30%;height:30%;top:33%;left:70%;"></div>
+		
+		</div> -->
+		<div id="knob1" class="dnob"  style="width:7%;height:10%;top:47%;left:43%;">
+		<div class="dh" style="width:20%;height:5%;top:85%;left:20%;transform:rotate(304deg)"></div>				
+		</div>
+		<input type="number" id="P" min="0" value="0" max="200" style="position: absolute;width: 5%;height: 3%;top: 50.5%;left: 44.5%;text-align:center; background: transparent;border:none"readOnly=readOnly>
+		<!---knob 2 1st col 1st row--------->
+		<!-- <div class="bluedot" id="knob2" style=" width:7%;height:10%;top:80%;left:18.8%;pointer-events:none;">
+		<div class="handlep" id="knob2p" onclick="rotate3()"style="width:30%;height:30%;top:33%;left:0%;"></div>
+		<div class="handlen" id="knob2n"onclick="rotate4()" style="width:30%;height:30%;top:33%;left:70%;"></div>
+		<!--maximum heater power for on-off--
+		
+		</div> -->
+		<div id="knob2" class="dnob"  style="width:7%;height:10%;top:80%;left:18.8%;pointer-events:none">
+		<div class="dh" style="width:20%;height:5%;top:85%;left:20%;transform:rotate(304deg)"></div>				
+		</div>
+		<input type="number" id="I" min="0" value="0" max="1" step="0.1" style="position: absolute;width: 4%;height: 3%;top:84%;left:20.7%;text-align:center; background: transparent;border:none"readOnly=readOnly>
+		<!---knob 3 1st col 1st row--------->
+		<!-- <div class="bluedot" id="knob3" style=" width:7%;height:10%;top:80%;left:27%;pointer-events:none;">
+		<div class="handlep" id="knob3p" onclick="rotate5()"style="width:30%;height:30%;top:33%;left:0%;"></div>
+		<div class="handlen" id="knob3n"onclick="rotate6()" style="width:30%;height:30%;top:33%;left:70%;"></div>
+		<!--on-off overlap--
+		</div>	 -->
+		<div id="knob3" class="dnob"  style=" width:7%;height:10%;top:80%;left:27%;pointer-events:none">
+		<div class="dh" style="width:20%;height:5%;top:85%;left:20%;transform:rotate(304deg)"></div>				
+		</div>
+		<input type="number" id="overlap" min="0" value="0" max="4" step="1" style="position: absolute;width: 4%;height: 3%;top:84%;left:29%;text-align:center; background: transparent;border:none"readOnly=readOnly>
+				
+		<!---knob 4 1st col 1st row--------->
+		<!-- <div class="bluedot" id="knob4" style=" width:8%;height:12%;top:77.5%;left:64%;pointer-events:none;">
+		<div class="handlep" id="knob4p" onclick="rotate7();point_move()"style="width:30%;height:30%;top:33%;left:0%;"></div>
+		<div class="handlen" id="knob4n"onclick="rotate8();point_move()" style="width:30%;height:30%;top:33%;left:70%;"></div>
+		</div>	 -->
+		<div id="knob4" class="dnob"  style=" width:8%;height:12%;top:77.5%;left:64%;">
+		<div class="dh" style="width:20%;height:5%;top:85%;left:20%;transform:rotate(304deg)"></div>				
+		</div>	
+		<input type="number" id="setvalue" min="0" value="0" max="10" step="0.5" style="position: absolute;width: 4%;height: 3%;top:82%;left:66.5%;text-align:center; background: transparent;border:none"readOnly=readOnly>
+		  
+				</div><!--img container div end--><br>				
+									
+					<button type="button" id="check"  class="btn btn-primary">Check Connection</button>
+					<button type="button" id="crtable" onclick="createTable()" class="btn btn-info">Show Table</button>
+					<button type="button" id="clr" onclick="Refresh()" class="btn btn-danger">Clear</button>
+					
+				  <input type="number" id="controllerchk" min="1" value="1" max="6" style="visibility:hidden;"><!--checks openloop or P control-->
+				  <input type="number" id="dischk" min="1" value="3" max="3" style="visibility:hidden;" ><!--checks distance in sensor duct-->
+					
+					<!--<button type="button" id="refresh" onclick="Refresh()" class="btn btn-primary" >Clear</button>-->
+			</div><!---end of 1st col under 1st row--->	
+			
+        </div><!--1st row under fourth container end-->
+		
+		
+		<div class="row my-5 gy-2"><!--- 4th row under fourth container start--->	
+		<div class="col-md-1"></div>
+        <div class="col-md-10"><!--1st col under 4th row start -->			
+		
+			<table id="myTable" style="width:100%">
+			
+				
+				  <tr>
+					<th>Sl No.</th>
+					<th>Blower Angle (&deg;)</th> 
+					<th>Distance (mm)</th>
+					<th>Transport Lag (ms)</th>
+					<th>Transfer Lag (ms)</th>
+				  </tr>
+				  
+			</table>
+			
+		</div><!--1st col under 4th row end -->
+		<div class="col-md-1"></div>
+		</div>
+		
+	
+		
+
+	 <div class="row justify-content-center"><!-----------------------graph T vs. w----------------------------------------->
+		
+	 
+			<div class="col-md-12">
+				<div id = "plotbucket" class="content-center" style="display:none; position:relative; border:3px solid blue;height:530px;width:823px ">
+				<button type="button" id="exportChart" class="btn btn-primary"  style="display:none;position:absolute;left:20%;">Download Plot</button>
+				
+					<div id="chartContainer"  style="display:none; position:absolute; height: 80%; width: 100%;z-index:1 "></div>
+					
+					
+				</div>
+				
+			</div>
+			
+			
+		
+	</div>	
+
+	
+	
+          <!-- Code End here-->
+        </div><!--Fourth container under body tag end-->
+          
+      <!--</div>
+    </div>-->
+
+    <div class="container p-3 my-5 text-primary text-center border"><!--Last and fifth container under body tag start-->
+      <div class="row">
+        <footer>
+          <div class="row ce">
+            <div class="col-sm-12">
+              <p class="h5"><i> Copyright ©2022 <a href="http://vlabs.iitkgp.ac.in/vlt/">Virtual Labs IIT Kharagpur</a> </i><br><br>
+              <a href="../../license/index.html" target="_blank"> Licensing Terms </a>
+            </p>
+            </div>
+          </div>
+        </footer>
+      </div>
+  </div><!--Last and fifth container under body tag end-->
+  <script>
+
+var knobPositionX;
+      var knobPositionY;
+      var mouseX;
+      var mouseY;
+      var knobCenterX;
+      var knobCenterY;
+      var adjacentSide;
+      var oppositeSide;
+      var currentRadiansAngle;
+      var getRadiansInDegrees;
+      var finalAngleInDegrees;
+      var volumeSetting;
+      //var tickHighlightPosition;
+      //var audio = new Audio("https://www.cineblueone.com/maskWall/audio/skylar.mp3"); //Celine Dion's "Ashes"
+      //var startingTickAngle = -135;
+      //var tickContainer = document.getElementById("tickContainer");
+      var knob1 = document.getElementById("knob1");
+	  var knob2 = document.getElementById("knob2");
+	  var knob3 = document.getElementById("knob3");
+	  var knob4 = document.getElementById("knob4");
+	
+	   
+      var boundingRectangle1 = knob1.getBoundingClientRect(); //get rectangular geometric data of knob (x, y, width, height)
+	  var boundingRectangle2 = knob2.getBoundingClientRect();
+	  var boundingRectangle3 = knob3.getBoundingClientRect();
+	  var boundingRectangle4 = knob4.getBoundingClientRect();
+	  
+
+      function main1()
+      {
+          knob1.addEventListener(getMouseDown(), onMouseDown1); //listen for mouse button click
+          document.addEventListener(getMouseUp(), onMouseUp1); //listen for mouse button release
+	  }
+	  function main2()
+      {
+          knob2.addEventListener(getMouseDown(), onMouseDown2); //listen for mouse button click
+          document.addEventListener(getMouseUp(), onMouseUp2); //listen for mouse button release
+	  }
+	  function main3()
+      {
+          knob3.addEventListener(getMouseDown(), onMouseDown3); //listen for mouse button click
+          document.addEventListener(getMouseUp(), onMouseUp3); //listen for mouse button release
+	  }
+	  function main4()
+      {
+          knob4.addEventListener(getMouseDown(), onMouseDown4); //listen for mouse button click
+          document.addEventListener(getMouseUp(), onMouseUp4); //listen for mouse button release
+	  }
+	  
+      //on mouse buttons down
+      function onMouseDown1()
+      {
+	  document.addEventListener(getMouseMove(), onMouseMove1); //start drag
+      }	  
+	  function onMouseDown2()
+      {
+	  document.addEventListener(getMouseMove(), onMouseMove2); //start drag
+      }
+	  function onMouseDown3()
+      {
+	  document.addEventListener(getMouseMove(), onMouseMove3); //start drag
+      }
+	  function onMouseDown4()
+      {
+	  document.addEventListener(getMouseMove(), onMouseMove4); //start drag
+      }
+	 
+      //on mouse buttons release
+      function onMouseUp1()
+      {
+          document.removeEventListener(getMouseMove(), onMouseMove1); //stop drag
+      }
+	  function onMouseUp2()
+      {
+          document.removeEventListener(getMouseMove(), onMouseMove2); //stop drag
+      }
+	  function onMouseUp3()
+      {
+          document.removeEventListener(getMouseMove(), onMouseMove3); //stop drag
+      }
+	  function onMouseUp4()
+      {
+          document.removeEventListener(getMouseMove(), onMouseMove4); //stop drag
+      }
+	  
+      //compute mouse angle relative to center of volume knob
+      //For clarification, see my basic trig explanation at:
+      //https://www.quora.com/What-is-the-significance-of-the-number-pi-to-the-universe/answer/Kevin-Lam-15
+      function onMouseMove1(event)
+      {	  
+          knobPositionX = boundingRectangle1.left; //get knob's global x position
+          knobPositionY = boundingRectangle1.top; //get knob's global y position
+
+          if(detectMobile() == "desktop")
+          {
+              mouseX = event.pageX; //get mouse's x global position
+              mouseY = event.pageY; //get mouse's y global position
+          } else {
+              mouseX = event.touches[0].pageX; //get finger's x global position
+              mouseY = event.touches[0].pageY; //get finger's y global position
+          }
+
+          knobCenterX = boundingRectangle1.width / 2 + knobPositionX; //get global horizontal center position of knob relative to mouse position
+          knobCenterY = boundingRectangle1.height / 2 + knobPositionY; //get global vertical center position of knob relative to mouse position
+
+          adjacentSide = knobCenterX - mouseX; //compute adjacent value of imaginary right angle triangle
+          oppositeSide = knobCenterY - mouseY; //compute opposite value of imaginary right angle triangle
+
+          //arc-tangent function returns circular angle in radians
+          //use atan2() instead of atan() because atan() returns only 180 degree max (PI radians) but atan2() returns four quadrant's 360 degree max (2PI radians)
+          currentRadiansAngle = Math.atan2(adjacentSide, oppositeSide);
+
+          getRadiansInDegrees = currentRadiansAngle * 180 / Math.PI; //convert radians into degrees
+
+          finalAngleInDegrees = -(getRadiansInDegrees - 135); //knob is already starting at -135 degrees due to visual design so 135 degrees needs to be subtracted to compensate for the angle offset, negative value represents clockwise direction
+
+          //only allow rotate if greater than zero degrees or lesser than 270 degrees
+          if(finalAngleInDegrees >= 0 && finalAngleInDegrees <= 300)
+          {
+              knob1.style.transform = "rotate(" + finalAngleInDegrees + "deg)"; //use dynamic CSS transform to rotate volume knob
+
+              //270 degrees maximum freedom of rotation / 100% volume = 1% of volume difference per 2.7 degrees of rotation
+              volumeSetting = Math.round(finalAngleInDegrees / (300 / 100));
+              var voltValue = volumeSetting * (200/100); 
+			  if(voltValue == 0){
+              document.getElementById("P").value = 0;//math.round(voltValue) ;//+ "%"; //update volume text
+			  }
+              if(voltValue == 60){
+              document.getElementById("P").value = 50;//math.round(voltValue) ;//+ "%"; //update volume text
+			  }
+			  if(voltValue == 134){
+              document.getElementById("P").value = 100;//math.round(voltValue) ;//+ "%"; //update volume text
+			  }
+			  if(voltValue == 200){
+              document.getElementById("P").value = 200;//math.round(voltValue) ;//+ "%"; //update volume text
+			  }
+          }
+      }
+
+///knob2/////
+function onMouseMove2(event)
+      {
+          knobPositionX = boundingRectangle2.left; //get knob's global x position
+          knobPositionY = boundingRectangle2.top; //get knob's global y position
+
+          if(detectMobile() == "desktop")
+          {
+              mouseX = event.pageX; //get mouse's x global position
+              mouseY = event.pageY; //get mouse's y global position
+          } else {
+              mouseX = event.touches[0].pageX; //get finger's x global position
+              mouseY = event.touches[0].pageY; //get finger's y global position
+          }
+
+          knobCenterX = boundingRectangle2.width / 2 + knobPositionX; //get global horizontal center position of knob relative to mouse position
+          knobCenterY = boundingRectangle2.height / 2 + knobPositionY; //get global vertical center position of knob relative to mouse position
+
+          adjacentSide = knobCenterX - mouseX; //compute adjacent value of imaginary right angle triangle
+          oppositeSide = knobCenterY - mouseY; //compute opposite value of imaginary right angle triangle
+
+          //arc-tangent function returns circular angle in radians
+          //use atan2() instead of atan() because atan() returns only 180 degree max (PI radians) but atan2() returns four quadrant's 360 degree max (2PI radians)
+          currentRadiansAngle = Math.atan2(adjacentSide, oppositeSide);
+
+          getRadiansInDegrees = currentRadiansAngle * 180 / Math.PI; //convert radians into degrees
+
+          finalAngleInDegrees = -(getRadiansInDegrees - 135); //knob is already starting at -135 degrees due to visual design so 135 degrees needs to be subtracted to compensate for the angle offset, negative value represents clockwise direction
+
+          //only allow rotate if greater than zero degrees or lesser than 270 degrees
+          if(finalAngleInDegrees >= 0 && finalAngleInDegrees <= 300)
+          {
+              knob2.style.transform = "rotate(" + finalAngleInDegrees + "deg)"; //use dynamic CSS transform to rotate volume knob
+
+              //270 degrees maximum freedom of rotation / 100% volume = 1% of volume difference per 2.7 degrees of rotation
+              volumeSetting = Math.floor(finalAngleInDegrees / (300 / 100));
+				var voltValue = volumeSetting * (1.1/100); 
+              document.getElementById("I").value = math.floor(voltValue * 10)/10 ;
+              
+             // document.getElementById("volumeValue").innerHTML = volumeSetting + "%"; //update volume text
+          }
+      }
+	  
+	  ///knob3/////
+function onMouseMove3(event)
+      {
+          knobPositionX = boundingRectangle3.left; //get knob's global x position
+          knobPositionY = boundingRectangle3.top; //get knob's global y position
+
+          if(detectMobile() == "desktop")
+          {
+              mouseX = event.pageX; //get mouse's x global position
+              mouseY = event.pageY; //get mouse's y global position
+          } else {
+              mouseX = event.touches[0].pageX; //get finger's x global position
+              mouseY = event.touches[0].pageY; //get finger's y global position
+          }
+
+          knobCenterX = boundingRectangle3.width / 2 + knobPositionX; //get global horizontal center position of knob relative to mouse position
+          knobCenterY = boundingRectangle3.height / 2 + knobPositionY; //get global vertical center position of knob relative to mouse position
+
+          adjacentSide = knobCenterX - mouseX; //compute adjacent value of imaginary right angle triangle
+          oppositeSide = knobCenterY - mouseY; //compute opposite value of imaginary right angle triangle
+
+          //arc-tangent function returns circular angle in radians
+          //use atan2() instead of atan() because atan() returns only 180 degree max (PI radians) but atan2() returns four quadrant's 360 degree max (2PI radians)
+          currentRadiansAngle = Math.atan2(adjacentSide, oppositeSide);
+
+          getRadiansInDegrees = currentRadiansAngle * 180 / Math.PI; //convert radians into degrees
+
+          finalAngleInDegrees = -(getRadiansInDegrees - 135); //knob is already starting at -135 degrees due to visual design so 135 degrees needs to be subtracted to compensate for the angle offset, negative value represents clockwise direction
+
+          //only allow rotate if greater than zero degrees or lesser than 270 degrees
+          if(finalAngleInDegrees >= 0 && finalAngleInDegrees <= 300)
+          {
+              knob3.style.transform = "rotate(" + finalAngleInDegrees + "deg)"; //use dynamic CSS transform to rotate volume knob
+
+              //270 degrees maximum freedom of rotation / 100% volume = 1% of volume difference per 2.7 degrees of rotation
+              volumeSetting = Math.floor(finalAngleInDegrees / (300 / 100));
+				var voltValue = volumeSetting * (4/100); 
+              document.getElementById("overlap").value = math.round(voltValue) ;
+              
+             // document.getElementById("volumeValue").innerHTML = volumeSetting + "%"; //update volume text
+          }
+      }
+	  
+	  ///knob4/////
+function onMouseMove4(event)
+      {
+          knobPositionX = boundingRectangle4.left; //get knob's global x position
+          knobPositionY = boundingRectangle4.top; //get knob's global y position
+
+          if(detectMobile() == "desktop")
+          {
+              mouseX = event.pageX; //get mouse's x global position
+              mouseY = event.pageY; //get mouse's y global position
+          } else {
+              mouseX = event.touches[0].pageX; //get finger's x global position
+              mouseY = event.touches[0].pageY; //get finger's y global position
+          }
+
+          knobCenterX = boundingRectangle4.width / 2 + knobPositionX; //get global horizontal center position of knob relative to mouse position
+          knobCenterY = boundingRectangle4.height / 2 + knobPositionY; //get global vertical center position of knob relative to mouse position
+
+          adjacentSide = knobCenterX - mouseX; //compute adjacent value of imaginary right angle triangle
+          oppositeSide = knobCenterY - mouseY; //compute opposite value of imaginary right angle triangle
+
+          //arc-tangent function returns circular angle in radians
+          //use atan2() instead of atan() because atan() returns only 180 degree max (PI radians) but atan2() returns four quadrant's 360 degree max (2PI radians)
+          currentRadiansAngle = Math.atan2(adjacentSide, oppositeSide);
+
+          getRadiansInDegrees = currentRadiansAngle * 180 / Math.PI; //convert radians into degrees
+
+          finalAngleInDegrees = -(getRadiansInDegrees - 135); //knob is already starting at -135 degrees due to visual design so 135 degrees needs to be subtracted to compensate for the angle offset, negative value represents clockwise direction
+
+          //only allow rotate if greater than zero degrees or lesser than 270 degrees
+          if(finalAngleInDegrees >= 0 && finalAngleInDegrees <= 300)
+          {
+              knob4.style.transform = "rotate(" + finalAngleInDegrees + "deg)"; //use dynamic CSS transform to rotate volume knob
+
+              //270 degrees maximum freedom of rotation / 100% volume = 1% of volume difference per 2.7 degrees of rotation
+              volumeSetting = Math.floor(finalAngleInDegrees / (300 / 100));
+				var voltValue = volumeSetting * (10/100); 
+              document.getElementById("setvalue").value = math.floor(voltValue * 10)/10 ;
+              //LevelIndicate();
+             // document.getElementById("volumeValue").innerHTML = volumeSetting + "%"; //update volume text
+          }
+      }
+	  
+
+      //detect for mobile devices from https://www.sitepoint.com/navigator-useragent-mobiles-including-ipad/
+      function detectMobile()
+      {
+          var result = (navigator.userAgent.match(/(iphone)|(ipod)|(ipad)|(android)|(blackberry)|(windows phone)|(symbian)/i));
+
+          if(result !== null)
+          {
+              return "mobile";
+          } else {
+              return "desktop";
+          }
+      }
+
+      function getMouseDown()
+      {
+          if(detectMobile() == "desktop")
+          {
+              return "mousedown";
+          } else {
+              return "touchstart";
+          }
+      }
+
+      function getMouseUp()
+      {
+          if(detectMobile() == "desktop")
+          {
+              return "mouseup";
+          } else {
+              return "touchend";
+          }
+      }
+
+      function getMouseMove()
+      {
+          if(detectMobile() == "desktop")
+          {
+              return "mousemove";
+          } else {
+              return "touchmove";
+          }
+      }
+
+      main1();
+	  main2();
+	  main3();
+	  main4();
+	 
+////CODE FOR ROBUSTNESS OF KNOB FUNCTIONS/////
+if (performance.navigation.type === 1) { // 1 = Reload
+      // Save a flag to indicate the redirect started
+      localStorage.setItem("redirectFromReload", "true");
+      // Redirect to a.html
+      window.location.href = "index.html";
+    }
+</script>
+  <script src="./js/jsPlumb.js"></script>	
+	<script src="./js/demo.js"> </script> 
+	 
+</body><!--body tag end-->
+</html><!--html tag end-->
